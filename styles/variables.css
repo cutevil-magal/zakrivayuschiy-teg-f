@@ -6,23 +6,22 @@
     --gradient-line-color: #000;
     --gradient-first-color: #007F0C;
     --gradient-second-color: #004306;
-    /* --image-url: ./images/image.png; */
+
     --font-main: 'Inter';
     --font-accent: 'PressStart2P';
     --card-text-weight: 465;
     --card-title-weight: 785;
 
     --content-width:clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
-    --content-border: 2px solid var(--accent-color);   
+    --content-border: 2px solid var(--accent-color);
 
     --button-like-color: var(--accent-color);
     
-
     --heard-fill: #FF0000;
 
 }
-@media (width <= 375px){
-    :root{
+@media (width <= 375px) {
+    :root {
         --content-width: 100%;
     }
   }

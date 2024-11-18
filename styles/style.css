@@ -86,7 +86,7 @@
   cursor: pointer;
 }
 
-.theme-menu__button:focus{
+.theme-menu__button:focus {
   outline: none;
 }
 
@@ -344,7 +344,7 @@
 }
 
 .content__dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.75); 
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .content__dialog-form {
@@ -458,7 +458,7 @@
 почему-то не сработывает
 */
 
-@media (width < 376px){
+@media (width < 376px) {
   .content__title {
     padding: 3.5px 10px 5.5px;
   }
