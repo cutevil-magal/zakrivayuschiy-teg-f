@@ -164,6 +164,7 @@
   position: relative;
   overflow: hidden;
   margin-inline-start: 11px;
+  cursor: pointer;
 }
 
 .content__form-button:focus {
@@ -219,6 +220,7 @@
 /*---- сердце------ */
 
 .like-icon {
+  cursor: pointer;
   fill: var(--accent-color);
   height: 38px;
   width: 38px;
