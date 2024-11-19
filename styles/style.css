@@ -112,15 +112,6 @@
   animation: moveArrow 0.5s ease-in-out infinite alternate;
 }
 
-@keyframes moveArrow {
-  0% {
-      transform: translateY(-50%) translateX(0);
-  }
-  100% {
-      transform: translateY(-50%) translateX(4px);
-  }
-}
-
 .theme-menu__button::after {
   content: '';
   position: absolute;
@@ -147,7 +138,6 @@
 }
 
 .block-outline {
-  /*  outline: 2px solid var(--accent-color); */
   border: var(--content-border);
 }
 
@@ -156,10 +146,12 @@
   font-size: 14px;
 }
 
-/* ----------- кнопка like */
-
+/* ----------- кнопка like----------- */
+.card__like-button {
+  height: 38px;
+  width: 130px;
+}
 .content__form-button {
-  padding: 8px 35px;
   line-height: 90%;
   position: relative;
   overflow: hidden;
@@ -224,7 +216,6 @@
   fill: var(--accent-color);
   height: 38px;
   width: 38px;
-  transition: fill 0.3s linear;
 }
 
 .like-icon .contour {
@@ -282,34 +273,17 @@
   animation: sparkles 0.3s ease-in 0.3s both;
 }
 
-@keyframes heart-scale {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes sparkles {
-  0%, 100% {
-    fill: none;
-  }
-  50% {
-    fill: var(--heard-fill);
-  }
-}
-
 /* ----------------------------- content --------------------------- */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50.4px;
+}
 
 .content__form {
   display: flex;
   justify-content: flex-end;
   padding: 25px;
-}
-
-.content__section {
-  margin-block-end: 50.4px;
 }
 
 .content__title {
@@ -418,10 +392,9 @@
   font-weight: normal;
 }
 
-@supports ((text-stroke: var(--bg-color)) or (-webkit-text-stroke: var(--bg-color))) {
+@supports (-webkit-text-stroke: var(--bg-color)) {
   .content__watermark {
     -webkit-text-stroke: 0.5px var(--bg-color);
-    text-stroke: 1px var(--bg-color);
     text-shadow: none;
   }
 }
@@ -455,10 +428,6 @@
   filter: sepia(1) contrast(2) brightness(200%);
 } 
 
-/* @media (width <= 375px)
-почему-то не сработывает
-*/
-
 @media (width < 376px) {
   .content__title {
     padding: 3.5px 10px 5.5px;
@@ -479,5 +448,9 @@
 
   .content__watermark {
     padding: 13px 3px;
+  }
+  
+  .content__dialog {
+    padding: 30px 42px;
   }
 }
