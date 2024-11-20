@@ -18,7 +18,7 @@
   --content-width:clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   --content-border: 2px solid var(--accent-color);
   --button-like-color: var(--accent-color);
-  --heard-fill: #FF0000; 
+  --heard-fill: #FF0000;
 }
 
 @media (width <= 375px) {
