@@ -12,14 +12,68 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+/*---- сердце------ */
 
-@keyframes moveArrow {
-  0% {
-    transform: translateY(-50%) translateX(0);
-  }
-  100% {
-    transform: translateY(-50%) translateX(4px);
-  }
+.like-icon {
+  cursor: pointer;
+  fill: var(--accent-color);
+  height: 38px;
+  width: 38px;
+}
+
+.like-icon .contour {
+  fill: var(--accent-color);
+}
+
+.like-icon .sparks {
+  fill: var(--heard-fill);
+}
+
+.like-icon .main-body, 
+.like-icon .core, 
+.like-icon .sparks {
+  fill: transparent;
+}
+
+.like-icon .core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:hover .core,
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+}
+
+.like-icon:active .core,
+.like-icon:active .main-body {
+  fill: var(--heard-fill);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s linear 0.06;
+  fill: var(--heard-fill);
+}
+
+.heart .contour {
+  transition: fill 0.1s linear;
+  fill: var(--accent-color);
+}
+
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body {
+  fill: var(--heard-fill);
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkles 0.3s ease-in 0.3s;
 }
 
 @keyframes heart-scale {
@@ -39,5 +93,14 @@
   }
   50% {
     fill: var(--heard-fill);
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(4px);
   }
 }
